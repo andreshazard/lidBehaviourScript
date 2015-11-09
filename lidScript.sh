@@ -4,25 +4,25 @@
 FILE=/etc/systemd/logind.conf
 action=''
 
-printf "\033[1;37mWhat should I do when closing the lid: \n" 
+printf "\033[1;37mWhat should I do when closing the lid: \n"
 printf "Current status :\033[1;31m "
 sed -n '/HandleLidSwitch/p' $FILE #print line
-printf "\033[1;33m1 - Suspend \n2 - Power Off \n3 - Nothing \n4 - Ignore\n"
+printf "\033[1;33m1 - Suspend \n2 - Power Off \n3 - Hibernate \n4 - Ignore\n"
 printf "\033[1;37mAnswer : "
 read  input
 
-case $input in 
-    1)  
+case $input in
+    1)
         action='suspend'
         ;;
-    2) 
+    2)
         action='poweroff'
         ;;
-    
+
     3)  action='hibernate'
-        ;; 
-    
-    4)  
+        ;;
+
+    4)
         action='ignore'
         ;;
     *)
