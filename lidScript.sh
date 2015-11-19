@@ -35,6 +35,7 @@ then
 sed -i "22s/.*/HandleLidSwitch=$action/" $FILE #search for line and replace
 printf "Done \033[1;31m \n"
 sed -n '/HandleLidSwitch/p' $FILE #print line
-restart systemd-logind
+restart systemd-logind #For Ubuntu
+#systemctl restart systemd-logind.service #For Fedora
 printf "\033[0m"
 fi
