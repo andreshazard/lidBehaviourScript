@@ -1,3 +1,3 @@
 # lidBehaviourScript
-Script to change the behavior when closing lid for Ubuntu.
-Currently the GUI option is not working, the issue is describe on http://ubuntuhandbook.org/index.php/tag/lid-closed-behavior/
+Script to change the behavior when closing lid for Ubuntu orny other distro with the logind.conf file.
+Currently the GUI option is not working, the issue is describe  ihttp://ubuntuhandbook.org/index.php/tag/lid-closed-behavior
